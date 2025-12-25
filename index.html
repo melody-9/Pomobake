@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomobake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Title -->
+  <h1>Pomobake 🍪</h1>
+  <p>Focus a little, bake a treat, enjoy your break.</p>
+
+  <!-- Focus Timer Section -->
+  <section>
+    <h2>Focus Timer</h2>
+
+    <label for="focusTime">
+      Set focus time (minutes):
+    </label>
+    <input type="number" id="focusTime" min="1" value="25">
+
+    <p id="timerDisplay">25:00</p>
+    <p id="mode">Mode: Focus</p>
+    <button id="startFocus" class="image-btn start-btn"></button>
+    <button id="pauseFocus" class="image-btn pause-btn"></button>
+    <button id="resetFocus" class="image-btn reset-btn"></button>
+  </section>
+  
+  <audio id="focusMusic" controls loop>
+    <source src="assests/tunes/track.mp3" type="audio/mpeg">
+    <source src="assests/tunes/track.wav" type="audio/wav">
+  </audio>
+
+  <!-- Points Section -->
+  <section>
+    <h2>Your Points</h2>
+    <p>Points earned: <span id="points">0</span></p>
+  </section>
+
+  <!-- Break Store -->
+  <section>
+  <h2>Take a Break</h2>
+
+ <div class="break-container">
+
+  <div class="break-item">
+    <button id="shortBreak" class="image-btn short-break"></button>
+    <p class="break-cost">Cost: 50 points</p>
+  </div>
+
+  <div class="break-item">
+    <button id="mediumBreak" class="image-btn medium-break"></button>
+    <p class="break-cost">Cost: 100 points</p>
+  </div>
+
+  <div class="break-item">
+    <button id="longBreak" class="image-btn long-break"></button>
+    <p class="break-cost">Cost: 200 points</p>
+  </div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
