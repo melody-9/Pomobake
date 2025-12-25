@@ -1,5 +1,5 @@
 body {
-  background-image: url("assests/images/bg.png");
+  background-image: url("bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,15 +24,15 @@ body {
 
 
 .start-btn {
-  background-image: url("assests/images/start.png");
+  background-image: url("start.png");
 }
 
 .pause-btn {
-  background-image: url("assests/images/pause.png");
+  background-image: url("pause.png");
 }
 
 .reset-btn {
-  background-image: url("assests/images/reset.png");
+  background-image: url("reset.png");
 }
 .image-btn:hover {
   transform: scale(1.06);
@@ -74,13 +74,13 @@ body {
 
 
 .short-break{
-  background-image: url("assests/images/short\ break.png");
+  background-image: url("short break.png");
 }
 .long-break{
-  background-image: url("assests/images/long\ break.png");
+  background-image: url("long break.png");
 }
 .medium-break{
-  background-image: url("assests/images/medium\ break.png");
+  background-image: url("medium break.png");
 }
 /* Hover & Active Effects */
 .break-card:hover {
@@ -101,3 +101,4 @@ body {
   letter-spacing: 2px;
   color: #5A3E2B;
 }
+
