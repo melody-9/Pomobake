@@ -55,8 +55,8 @@ function startFocus() {
 
   startBtn.addEventListener("click", () => {
   startFocus();
-
-
+  }
+                            }
 
 function pauseFocus() {
   clearInterval(timer);
@@ -121,4 +121,5 @@ resetBtn.addEventListener("click", resetFocus);
 shortBreakBtn.addEventListener("click", () => startBreak(5, 50));
 mediumBreakBtn.addEventListener("click", () => startBreak(15, 100));
 longBreakBtn.addEventListener("click", () => startBreak(30, 200));
+
 
