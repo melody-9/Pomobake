@@ -9,18 +9,6 @@ body {
   padding: 40px;
   color: #5A3E2B;
 }
-.image-btn {
-  width: 80px;
-  height: 80px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;        /* 🔥 removes black box */
-  outline: none;       /* 🔥 removes focus ring */
-
-  cursor: pointer;
-}
 
 
 .start-btn {
@@ -93,12 +81,11 @@ body {
 }
 #timerDisplay {
   text-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-#timerDisplay {
-  font-size: 72px;        /* main size change */
+  font-size: 72px;       
   font-weight: 700;
   margin: 20px 0;
   letter-spacing: 2px;
   color: #5A3E2B;
 }
+
 
