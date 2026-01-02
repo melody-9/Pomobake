@@ -4,6 +4,10 @@ let timeLeft = 0; // seconds
 let points = 0;
 let isRunning = false;
 let mode = "focus"; // focus | break
+let currentTrack = 0;
+
+// Example playlist — replace with your own audio files
+const playlist = ["track1.mp3", "track2.mp3", "track3.mp3"];
 
 // ================= ELEMENTS =================
 const focusInput = document.getElementById("focusTime");
@@ -22,9 +26,10 @@ const longBreakBtn = document.getElementById("longBreak");
 const focusMusic = document.getElementById("focusMusic");
 
 // ================= MUSIC =================
-
-
-
+function playTrack() {
+  focusMusic.src = playlist[currentTrack];
+  focusMusic.play();
+}
 
 focusMusic.addEventListener("ended", () => {
   currentTrack++;
@@ -52,6 +57,20 @@ function startFocus() {
   mode = "focus";
   modeDisplay.textContent = "Mode: Focus";
   startBtn.disabled = true;
+
+  timer = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      updateDisplay();
+    } else {
+      clearInterval(timer);
+      isRunning = false;
+      startBtn.disabled = false;
+      alert("Focus session complete 🎉");
+    }
+  }, 1000);
+
+  playTrack();
 }
 
 function pauseFocus() {
@@ -117,6 +136,3 @@ resetBtn.addEventListener("click", resetFocus);
 shortBreakBtn.addEventListener("click", () => startBreak(5, 50));
 mediumBreakBtn.addEventListener("click", () => startBreak(15, 100));
 longBreakBtn.addEventListener("click", () => startBreak(30, 200));
-
-
-
